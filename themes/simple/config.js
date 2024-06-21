@@ -3,7 +3,7 @@ const CONFIG = {
   SIMPLE_LOGO_IMG: '/Logo.webp',
   SIMPLE_TOP_BAR: true, // 显示顶栏
   SIMPLE_TOP_BAR_CONTENT: process.env.NEXT_PUBLIC_THEME_SIMPLE_TOP_TIPS || '',
-  SIMPLE_LOGO_DESCRIPTION: process.env.NEXT_PUBLIC_THEME_SIMPLE_LOGO_DESCRIPTION || '<div>编程爱好者<br/>/互联网从业者<br/>/知识分享博主</div>',
+  SIMPLE_LOGO_DESCRIPTION: process.env.NEXT_PUBLIC_THEME_SIMPLE_LOGO_DESCRIPTION || '<div>🏆2006美国周刊年度风云人物<br/>/🏆2008感动中国组委会特别大奖<br/>/🏆2019年度地球卫士奖</div>/🏆2022年奥林匹克杯获得者</div>',
 
   SIMPLE_AUTHOR_LINK: process.env.NEXT_PUBLIC_AUTHOR_LINK || '#',
 
