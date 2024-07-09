@@ -36,7 +36,7 @@ const Footer = ({ title }) => {
             
             {/* WANG_AN 备案信息 */}
             {siteConfig('WANG_AN') && (
-              <div className="ml-2 flex items-center">
+              <div className="ml-1 flex items-center">
                 <i className='' />{' '}
                 <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='mr-2'>
                   {siteConfig('WANG_AN')}
