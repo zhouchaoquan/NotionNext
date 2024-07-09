@@ -21,7 +21,7 @@ const Footer = ({ title }) => {
         .<br />
 
         {/* 图片和备案信息在同一行，并居中 */}
-        <div className="flex justify-center">
+        <div className="flex justify-center items-center">
           {/* 使用<a>标签作为背景图片 */}
           <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='my-custom-class mr-2' style={{ 
             display: 'inline-block',
@@ -40,19 +40,18 @@ const Footer = ({ title }) => {
               </a>
             </>
           )}
+          
+          {/* BEI_AN 备案信息 */}
+          {siteConfig('BEI_AN') && (
+            <>
+              <i className='' />{' '}
+              <a href='https://beian.miit.gov.cn/' className='mr-2'>
+                {siteConfig('BEI_AN')}
+              </a>
+            </>
+          )}
         </div>
         <br />
-
-        {/* 其他备案信息 */}
-        {siteConfig('BEI_AN') && (
-          <>
-            <i className='' />{' '}
-            <a href='https://beian.miit.gov.cn/' className='mr-2'>
-              {siteConfig('BEI_AN')}
-            </a>
-            <br />
-          </>
-        )}
 
         <span className='hidden busuanzi_container_site_pv'>
           <i className='fas fa-eye' />
