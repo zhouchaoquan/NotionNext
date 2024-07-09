@@ -5,7 +5,7 @@ const Footer = ({ title }) => {
   const d = new Date()
   const currentYear = d.getFullYear()
   const since = siteConfig('SINCE')
-  const copyrightDate = parseInt(since) < currentYear ? since + '-' + currentYear : currentYear
+  const copyrightDate = parseInt(since) < currentYear ? `${since}-${currentYear}` : currentYear
 
   return (
     <footer className='relative z-10 dark:bg-gray-800 flex-shrink-0 justify-center text-center m-auto w-full leading-6 text-sm p-6 bg-white dark:text-gray-400'>
@@ -20,28 +20,31 @@ const Footer = ({ title }) => {
         </a>
         .<br />
 
-        {/* 图片和备案信息在同一行，并居中 */}
-        <div className="flex justify-center">
-          {/* 使用<a>标签作为背景图片 */}
-          <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='my-custom-class mr-2' style={{ 
-            display: 'inline-block',
-            width: '1em',
-            height: '1em',
-            backgroundImage: `url('https://beian.mps.gov.cn/img/logo01.dd7ff50e.png')`,
-            backgroundSize: 'cover',
-            marginRight: '0.5rem'
-          }}></a>
+        {/* 使用 flex 和 align-items 来底部对齐 */}
+        <div className="flex justify-center items-end">
+          {/* 图片 */}
+          <div className="flex items-end">
+            <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='my-custom-class mr-2' style={{ 
+              display: 'inline-block',
+              width: '1em',
+              height: '1em',
+              backgroundImage: `url('https://beian.mps.gov.cn/img/logo01.dd7ff50e.png')`,
+              backgroundSize: 'cover',
+              marginRight: '0.5rem'
+            }}></a>
+          </div>
+          
           {/* WANG_AN 备案信息 */}
           {siteConfig('WANG_AN') && (
-            <>
+            <div className="flex items-end ml-2">
               <i className='' />{' '}
               <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='mr-2'>
                 {siteConfig('WANG_AN')}
               </a>
-            </>
+            </div>
           )}
         </div>
-        <br />
+        
 
         {/* 其他备案信息 */}
         {siteConfig('BEI_AN') && (
