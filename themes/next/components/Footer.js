@@ -21,9 +21,10 @@ const Footer = ({ title }) => {
         .<br />
 
         {/* 使用 flex 和 align-items 来底部对齐 */}
-        <div className="flex justify-center items-end">
-          {/* 图片 */}
+        <div className="flex justify-center">
+          {/* 图片和 WANG_AN 备案信息放在同一个 div 中 */}
           <div className="flex items-end">
+            {/* 图片 */}
             <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='my-custom-class mr-2' style={{ 
               display: 'inline-block',
               width: '1em',
@@ -32,17 +33,17 @@ const Footer = ({ title }) => {
               backgroundSize: 'cover',
               marginRight: '0.5rem'
             }}></a>
+            
+            {/* WANG_AN 备案信息 */}
+            {siteConfig('WANG_AN') && (
+              <div className="ml-2">
+                <i className='' />{' '}
+                <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='mr-2'>
+                  {siteConfig('WANG_AN')}
+                </a>
+              </div>
+            )}
           </div>
-          
-          {/* WANG_AN 备案信息 */}
-          {siteConfig('WANG_AN') && (
-            <div className="flex items-end ml-2">
-              <i className='' />{' '}
-              <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='mr-2'>
-                {siteConfig('WANG_AN')}
-              </a>
-            </div>
-          )}
         </div>
         
 
