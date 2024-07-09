@@ -41,7 +41,7 @@ const Footer = ({ title }) => {
             </>
           )}
         </div>
-        
+        <br />
 
         {/* 其他备案信息 */}
         {siteConfig('BEI_AN') && (
