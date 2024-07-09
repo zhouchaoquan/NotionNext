@@ -23,7 +23,7 @@ const Footer = ({ title }) => {
         {/* 图片和备案信息在同一行 */}
         <div className="flex items-center">
           {/* 图片部分 */}
-          <img src='https://beian.mps.gov.cn/img/logo01.dd7ff50e.png' alt='备案图片' className='my-custom-class mr-2' />
+          <img src='https://beian.mps.gov.cn/img/logo01.dd7ff50e.png' alt='备案图片' className='my-custom-class mr-2' style={{ width: '1em', height: '1em', marginRight: '0.5rem' }} />
           {/* WANG_AN 备案信息 */}
           {siteConfig('WANG_AN') && (
             <>
