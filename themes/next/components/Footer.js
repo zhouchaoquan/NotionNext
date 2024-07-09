@@ -21,7 +21,7 @@ const Footer = ({ title }) => {
         .<br />
 
         {/* 图片和备案信息在同一行，并居中 */}
-        <div className="flex items-center justify-center">
+        <div className="flex justify-center">
           {/* 使用<a>标签作为背景图片 */}
           <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='my-custom-class mr-2' style={{ 
             display: 'inline-block',
