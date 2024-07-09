@@ -1,17 +1,17 @@
-import { siteConfig } from '@/lib/config'
-import DarkModeButton from '@/components/DarkModeButton'
+import { siteConfig } from '@/lib/config';
+import DarkModeButton from '@/components/DarkModeButton';
 
 const Footer = ({ title }) => {
-  const d = new Date()
-  const currentYear = d.getFullYear()
-  const since = siteConfig('SINCE')
-  const copyrightDate = parseInt(since) < currentYear ? `${since}-${currentYear}` : currentYear
+  const d = new Date();
+  const currentYear = d.getFullYear();
+  const since = siteConfig('SINCE');
+  const copyrightDate = parseInt(since) < currentYear ? `${since}-${currentYear}` : currentYear;
 
   return (
     <footer className='relative z-10 dark:bg-gray-800 flex-shrink-0 justify-center text-center m-auto w-full leading-6 text-sm p-6 bg-white dark:text-gray-400'>
       <span>
         <DarkModeButton />
-        <i className='fas fa-copyright' /> {`${copyrightDate}`}{' '}
+        <i className='fas fa-copyright' /> {copyrightDate}{' '}
         <span className='mx-1 animate-pulse'>
           <i className='fas fa-heart' />
         </span>{' '}
@@ -20,10 +20,10 @@ const Footer = ({ title }) => {
         </a>
         .<br />
 
-        {/* 使用 flex 和 align-items 来底部对齐 */}
-        <div className="flex justify-center">
+        {/* 使用 flex 和 align-items 来垂直居中对齐 */}
+        <div className="flex justify-center items-center">
           {/* 图片和 WANG_AN 备案信息放在同一个 div 中 */}
-          <div className="flex items-end">
+          <div className="flex items-center">
             {/* 图片 */}
             <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='my-custom-class mr-2' style={{ 
               display: 'inline-block',
@@ -36,7 +36,7 @@ const Footer = ({ title }) => {
             
             {/* WANG_AN 备案信息 */}
             {siteConfig('WANG_AN') && (
-              <div className="ml-2">
+              <div className="ml-2 flex items-center">
                 <i className='' />{' '}
                 <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='mr-2'>
                   {siteConfig('WANG_AN')}
@@ -76,7 +76,7 @@ const Footer = ({ title }) => {
         </span>
       </span>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
