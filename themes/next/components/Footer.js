@@ -25,7 +25,7 @@ const Footer = ({ title }) => {
           {/* 图片和 WANG_AN 备案信息放在同一个 div 中 */}
           <div className="flex items-center">
             {/* 图片 */}
-            <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='my-custom-class mr-2' style={{ 
+            <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='my-custom-class mr-1' style={{ 
               display: 'inline-block',
               width: '1em',
               height: '1em',
