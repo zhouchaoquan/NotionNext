@@ -17,7 +17,7 @@ const Footer = ({ title }) => {
 
                 <i className='fas fa-copyright' /> {`${copyrightDate}`} <span className='mx-1 animate-pulse'><i className='fas fa-heart' /></span> <a href={siteConfig('LINK')} className='underline font-bold '>{siteConfig('AUTHOR')}</a>.<br />
 
-                {siteConfig('WANG_AN') && <><i className='' /> <a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='mr-2'>{siteConfig('WANG_AN')}</a><br /></>}
+                {siteConfig('WANG_AN') && <><i className='' /> <img src='https://beian.mps.gov.cn/img/logo01.dd7ff50e.png' alt='备案图片' className='my-custom-class' /><a href='https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375' className='mr-2'>{siteConfig('WANG_AN')}</a><br /></>}
               
                 {siteConfig('BEI_AN') && <><i className='' /> <a href='https://beian.miit.gov.cn/' className='mr-2'>{siteConfig('BEI_AN')}</a><br /></>}
               
