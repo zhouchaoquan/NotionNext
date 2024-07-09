@@ -19,7 +19,7 @@ const Footer = ({ title }) => {
 
                 {siteConfig('BEI_AN') && <><i className='fas fa-shield-alt' /> <a href='https://beian.miit.gov.cn/' className='mr-2'>{siteConfig('BEI_AN')}</a><br /></>}
                 {siteConfig('WANG_AN') && <><i className='fas fa-shield-alt' /> <a href='https://beian.mps.gov.cn/#/query/webSearch' className='mr-2'>{siteConfig('WANG_AN')}</a><br /></>}
-
+                <a href="https://beian.mps.gov.cn/#/query/webSearch?code=33030402001375" rel="noreferrer" target="_blank">浙公网安备33030402001375</a>
                 <span className='hidden busuanzi_container_site_pv'>
                     <i className='fas fa-eye' /><span className='px-1 busuanzi_value_site_pv'> </span> </span>
                 <span className='pl-2 hidden busuanzi_container_site_uv'>
